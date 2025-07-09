@@ -1,9 +1,22 @@
-import js from "@eslint/js";
+// eslint.config.mjs
 import globals from "globals";
-import { defineConfig } from "eslint/config";
+import pluginJs from "@eslint/js";
 
-
-export default defineConfig([
-  { files: ["**/*.{js,mjs,cjs}"], plugins: { js }, extends: ["js/recommended"] },
-  { files: ["**/*.{js,mjs,cjs}"], languageOptions: { globals: globals.browser } },
-]);
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        describe: true,
+        test: true,
+        it: true,
+        expect: true,
+        require: true,
+        module: true,
+        process: true,
+      },
+    },
+  },
+  pluginJs.configs.recommended,
+];
