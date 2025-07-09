@@ -9,7 +9,7 @@ export default [
       globals: {
         ...globals.browser,
         describe: true,
-         test: true,
+           test: true,
         it: true,
         expect: true,
         require: true,
