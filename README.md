@@ -19,9 +19,7 @@ This project includes both **unit tests**[Vitest] and **end-to-end (E2E) tests**
 
 2. **Install dependencies**
 
-   ```bash
    npm install
-   ```
 
 3. **Set up environment variables** Create a `.env` file in the root of the project based on `.env.example`.
 
@@ -31,44 +29,37 @@ This project includes both **unit tests**[Vitest] and **end-to-end (E2E) tests**
 
 - **Run all Playwright E2E tests**
 
-  ```bash
   npm run test:e2e
-  ```
 
 - **Run Playwright tests in UI mode**
 
-  ```bash
   npx playwright test --ui
-  ```
 
 - **Install Playwright browsers**
 
-  ```bash
   npx playwright install
-  ```
 
 - **Run unit tests**
 
-  ```bash
   npm run test:unit
-  ```
 
 ---
 
 ## 📁 Test Structure
 
 - **Unit tests** are located in the [`utils`](./utils) folder.    Run : npm run test\:unit
-- **End-to-end (E2E) tests** are located in the [`tests`](./tests) folder.  Run\:npm run test\:e2e
+
+- **End-to-end (E2E) tests** are located in the [`tests`](./tests) folder.  Run: npm run test\:e2e
 
 ---
 
 ## 🔐 Environment Variables
 
-Create a `.env` file with the follobwing keys:
+Create a `.env` file with the following keys:
 
 ```
-TEST_USERNAME=
-TEST_PASSWORD=
+TEST_USERNAME=your-email@stud.noroff.no
+TEST_PASSWORD=your-password
 ```
 
 > ⚠️ Do not commit actual values. Use `.env.example` as a template.
@@ -88,5 +79,3 @@ test("user can login", async ({ page }) => {
 ```
 
 ---
-
-Let me know if you want badges, GitHub Actions setup, or contribution guidelines added.
